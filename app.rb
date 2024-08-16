@@ -4,7 +4,7 @@ require "http"
 
 get("/") do
 
-  api_url = "https://api.exchangerate.host/list?access_key=#{ENV.fetch("GITHUB_TOKEN")}"
+  api_url = "https://api.exchangerate.host/list?access_key=#{ENV.fetch("EXCHANGE_RATE_KEY")}"
 
   @raw_response = HTTP.get(api_url)
 
