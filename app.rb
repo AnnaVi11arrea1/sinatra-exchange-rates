@@ -1,9 +1,19 @@
 require "sinatra"
 require "sinatra/reloader"
+require "http"
 
 get("/") do
-  "
-  <h1>Welcome to your Sinatra App!</h1>
-  <p>Define some routes in app.rb</p>
-  "
+
+  api_url = "https://api.exchangerate.host/list?access_key=#{ENV.fetch("GITHUB_TOKEN")}"
+
+  @raw_response = HTTP.get(api_url)
+
+  @raw_string = @raw_response.to.s
+
+  @parsed_data = JSON.parse(@raw_string)
+  erb(:home)
+end
+
+get("/:from_currency") do
+  @original_currency = params.fetch("from_currecny")
 end
