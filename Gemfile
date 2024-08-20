@@ -23,6 +23,7 @@ group :development, :test do
   gem "grade_runner"
   gem "pry"
   gem "sqlite3", "~> 1.4"
+  gem "rake"
 end
 
 group :test do
