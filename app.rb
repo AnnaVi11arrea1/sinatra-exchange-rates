@@ -4,8 +4,6 @@ require "http"
 
 get("/") do
 
-
-
   @raw_response = HTTP.get("https://api.exchangerate.host/list?access_key=#{ENV.fetch('EXCHANGE_RATE_KEY')}")
 
   @raw_string = @raw_response.to_s
