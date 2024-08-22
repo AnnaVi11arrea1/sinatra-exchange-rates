@@ -172,7 +172,6 @@ DEPENDENCIES
   executable-hooks
   grade_runner
   i18n
-  oj
   pry
   puma (~> 5.0)
   rake
