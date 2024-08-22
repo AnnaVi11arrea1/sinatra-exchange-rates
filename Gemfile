@@ -26,6 +26,7 @@ group :development, :test do
   gem "pry"
   gem "sqlite3", "~> 1.4"
   gem "executable-hooks"
+  gem "rake"
 
 end
 
@@ -37,6 +38,7 @@ group :test do
   gem "webmock"
   gem "webdrivers"
   gem "i18n"
-  gem "rake"
 
 end
+
+gem "http", "~> 5.2"
